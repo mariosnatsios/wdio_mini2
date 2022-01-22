@@ -14,7 +14,15 @@ const searchProduct = async(product = " ") =>{
     await searchButton.click();
 }
 
+const hitNavAccountList = async() =>{
+    const accountListNav = await HomePage.navAccountList;
+    await expect(accountListNav).toBeDisplayed();
+    await accountListNav.click();
+
+};
+
 module.exports = {
     verifyHomePage,
     searchProduct,
+    hitNavAccountList,
 };

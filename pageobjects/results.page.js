@@ -5,6 +5,7 @@ class ResultsPage extends Page {
     get searchInput() { 
         return $('#twotabsearchtextbox');
     };
+
 };
 
 module.exports = new ResultsPage();

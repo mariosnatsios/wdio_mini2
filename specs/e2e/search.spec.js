@@ -20,5 +20,4 @@ describe('Amazon Product Search', () => {
         await expect(browser).toHaveTitle(`Amazon.com : ${PRODUCT}`);       
     });
 
-
 });
