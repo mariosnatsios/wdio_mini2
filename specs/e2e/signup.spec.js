@@ -8,8 +8,9 @@ describe('Sign up behavior', () => {
         await signUpPageHelper.navigate2registration();
         await signUpPageHelper.verifyRegistrationPage();     
     });
-    it('should navigate the sign-up page', async() => {
-        
+    it('should fill the credentials and navigate to the authentication page', async() => {
+        await signUpPageHelper.registration();
+        await expect(browser).toHaveTitle('Authentication required');
     });
     
 });

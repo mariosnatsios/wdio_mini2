@@ -1,5 +1,9 @@
 const REGISTRATION = {
 
-    PASSWORD: 'password1',
+    PASSWORD: 'MorgothSilmarill666',
     
+};
+
+module.exports={
+    REGISTRATION,
 }

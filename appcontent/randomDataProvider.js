@@ -13,7 +13,7 @@ class Randomizer {
             10000000000,
             100000000000
         ];
-        finalIndex = index >1 ? 1 : index;
+        let finalIndex = index >1 ? 1 : index;
         return Math.ceil(Math.random() * multiplier[finalIndex]);
     }
 
@@ -46,4 +46,6 @@ class Randomizer {
     }
 
 }
+
+module.exports = new Randomizer();
 

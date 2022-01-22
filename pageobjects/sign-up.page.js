@@ -15,10 +15,10 @@ class SignUpPage{
         return $('#ap_password_check');
     };
 
-    get createMyAccount() {
+    get createAccountButton() {
         return $('#continue');
     };
 
 };
 
-module.exports = SignUpPage();
+module.exports = new SignUpPage();
