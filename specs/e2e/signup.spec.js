@@ -6,8 +6,8 @@ describe('Sign up behavior', () => {
     beforeEach(async() =>{
         await homePageHelper.verifyHomePage();
         await signUpPageHelper.navigate2registration();
-        
-    } );
+        await signUpPageHelper.verifyRegistrationPage();     
+    });
     it('should navigate the sign-up page', async() => {
         
     });

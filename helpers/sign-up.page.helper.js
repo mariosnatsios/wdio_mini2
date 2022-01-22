@@ -7,6 +7,11 @@ const navigate2registration = async() =>{
     await signInPageHelper.hitCreateAccountButton();
 };
 
+const verifyRegistrationPage = async() =>{
+    expect(browser).toHaveTitle('Amazon Registration');
+};
+
 module.exports = {
     navigate2registration,
+    verifyRegistrationPage,
 };
