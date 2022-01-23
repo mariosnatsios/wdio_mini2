@@ -15,6 +15,10 @@ class HomePage extends Page {
         return $('#nav-link-accountList');
     };
 
+    get navLinkAccountList(){
+        return $('#nav-link-accountList-nav-line-1');
+    };
+
 };
 
 module.exports = new HomePage();

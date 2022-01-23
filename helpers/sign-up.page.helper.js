@@ -7,7 +7,7 @@ const Randomizer = require('../appcontent/randomDataProvider');
 
 const navigate2registration = async() =>{
     await homePageHelper.hitNavAccountList(); 
-    await signInPageHelper.verifyRegistrationPage();
+    await signInPageHelper.verifySignInPage();
     await signInPageHelper.hitCreateAccountButton();
 };
 
