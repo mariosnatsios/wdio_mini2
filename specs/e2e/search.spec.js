@@ -1,23 +1,24 @@
 const homePageHelper = require('../../helpers/home.page.helper');
 const resultsPage = require('../../pageobjects/results.page');
-const resultsPageHelper = require('../../helpers/results.page.helper');
+const loginCookies =require('../../appcontent/login_cookies');
+
 
 const PRODUCT = 'laptop';
 
 describe('Amazon Product Search', () => {
-    
-    it('should open and verify the main page', async() => {
-        await homePageHelper.verifyHomePage();     
+    beforeEach(async() =>{
+        await homePageHelper.verifyHomePage();  
     });
-
-    it('should search a product and verify the search text value', async() => {
+    
+    it('should search a product and verify the search text value and the page title', async() => {
+        await browser.newWindow('https://www.amazon.com')
+        await browser.setCookies(loginCookies.LOGIN_COOKIES);
+        await browser.refresh();
         await homePageHelper.searchProduct(PRODUCT);
         const searchInput = await resultsPage.searchInput;
-        await expect(searchInput).toHaveValue(PRODUCT);   
+        await expect(searchInput).toHaveValue(PRODUCT);
+        await expect(browser).toHaveTitle(`Amazon.com : ${PRODUCT}`);   
     });
 
-    it('should redirect to a new page and verify the title', async() => {
-        await expect(browser).toHaveTitle(`Amazon.com : ${PRODUCT}`);       
-    });
 
 });
